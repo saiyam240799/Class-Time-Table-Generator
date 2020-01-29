@@ -1,0 +1,150 @@
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.util.StringTokenizer;
+import java.util.HashMap; 
+import java.util.Map; 
+import java.util.Map.Entry;
+import java. util. Arrays;
+
+
+ public class firstone
+ {static class FastReader 
+       { 
+           BufferedReader br; 
+           StringTokenizer st; 
+     
+           public FastReader() 
+           { 
+               br = new BufferedReader(new
+                        InputStreamReader(System.in)); 
+           } 
+     
+           String next() 
+           { 
+               while (st == null || !st.hasMoreElements()) 
+               { 
+                   try
+                   { 
+                       st = new StringTokenizer(br.readLine()); 
+                   } 
+                   catch (IOException  e) 
+                   { 
+                       e.printStackTrace(); 
+                   } 
+               } 
+               return st.nextToken(); 
+           } 
+     
+           int nextInt() 
+           { 
+               return Integer.parseInt(next()); 
+           } 
+     
+           long nextLong() 
+           { 
+               return Long.parseLong(next()); 
+           } 
+     
+           double nextDouble() 
+           { 
+               return Double.parseDouble(next()); 
+           } 
+     
+           String nextLine() 
+           { 
+               String str = ""; 
+               try
+               { 
+                   str = br.readLine(); 
+               } 
+               catch (IOException e) 
+               { 
+                   e.printStackTrace(); 
+               } 
+               return str; 
+           } 
+         
+       }
+    
+    static String sum (String s)
+    {
+        String s1 = ""; 
+        
+        if(s.contains("a"))
+            s1+="a";
+        if(s.contains("e"))
+            s1+="e";
+        if(s.contains("i"))
+            s1+="i";
+        if(s.contains("o"))
+            s1+="o";
+        if(s.contains("u"))
+            s1+="u";
+        
+            return s1;
+            
+        
+    }
+    
+
+    public static HashMap<String, Integer> sortByValue(HashMap<String, Integer> hm) 
+    { 
+        // Create a list from elements of HashMap 
+        List<Map.Entry<String, Integer> > list = 
+               new LinkedList<Map.Entry<String, Integer> >(hm.entrySet()); 
+  
+        // Sort the list 
+        Collections.sort(list, new Comparator<Map.Entry<String, Integer> >() { 
+            public int compare(Map.Entry<String, Integer> o1,  
+                               Map.Entry<String, Integer> o2) 
+            { 
+                return (o1.getValue()).compareTo(o2.getValue()); 
+            } 
+        }); 
+          
+        // put data from sorted list to hashmap  
+        HashMap<String, Integer> temp = new LinkedHashMap<String, Integer>(); 
+        for (Map.Entry<String, Integer> aa : list) { 
+            temp.put(aa.getKey(), aa.getValue()); 
+        } 
+        return temp; 
+    } 
+    
+    
+    public static void main(String args[])
+    {
+        FastReader input =new FastReader();
+        
+        String s = input.next();
+        
+        int n = s.length();
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    static boolean isPrime(int n) 
+    { 
+        // Corner case 
+        if (n <= 1) 
+            return false; 
+  
+        // Check from 2 to n-1 
+        for (int i = 2; i < n; i++) 
+            if (n % i == 0) 
+                return false; 
+  
+        return true; 
+    } 
+        
+      
+                
+            
+        }
